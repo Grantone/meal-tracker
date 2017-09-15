@@ -7,12 +7,28 @@ import { MealListComponent } from './meal-list.component';
   <div class="jumbotron">
     <h1>Meal Tracker</h1>
     </div>
+    <div class="container">
+
+
     <h3>Best Meals</h3>
         <div *ngFor="let currentMeal of favoriteMeals">
           <p>Name:{{meal.name}}</p>
           <p>Calories:{{meal.calories}}</p>
           <p>Description:{{meal.description}}</p>
         </div>
+        </div>
+        <div class="col-md-4">
+        <h3 class="add">Add Meal:</h3>
+        <div>
+        <input placeholder="Meal Type">
+        </div>
+        <div>
+        <input placeholder="Number of Calories">
+        </div>
+        <div>
+        <input placeholder="Description">
+        </div>
+        <button type="confirm!" class="btn btn-primary">Add</button>
         </div>
         <div *ngFor="let currentTask of tasks">
           <h3>{{ c }}</h3>
@@ -36,7 +52,7 @@ import { MealListComponent } from './meal-list.component';
 })
 
 export class AppComponent {
-'Meals' = 'Meal' [
+meals:Meal[]=[
       new Meal("Avocado; 160 calories per 100 grams.", 0),
       new Meal("Nut Seed and Milk; 1000 calories per 100.", 1),
       new Meal("Bryani; 168 calories er 100 grams.", 2),
