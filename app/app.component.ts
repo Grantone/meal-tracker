@@ -11,6 +11,7 @@ import { Meal } from './meal.model'
 <div class="container">
 <div class="col-md-8">
     <h3>Best Meals</h3>
+    <meals></meals>
         <div *ngFor="let currentMeal of favoriteMeals">
           <p>Name:{{meal.name}}</p>
           <p>Calories:{{meal.calories}}</p>
