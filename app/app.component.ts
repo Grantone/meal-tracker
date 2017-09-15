@@ -8,10 +8,7 @@ import { Meal } from './meal.model'
   <div class="jumbotron">
     <h1>Meal Tracker</h1>
     </div>
-    <div class="container">
-
 <div class="container">
-<div class"row">
 <div class="col-md-8">
     <h3>Best Meals</h3>
         <div *ngFor="let currentMeal of favoriteMeals">
@@ -24,19 +21,12 @@ import { Meal } from './meal.model'
         <h3 class="add">Add Meal:</h3>
         <div>
         <input placeholder="Meal Type">
-        </div>
-        <div>
         <input placeholder="Number of Calories">
-        </div>
-        <div>
         <input placeholder="Description">
-        </div>
         <button type="confirm!" class="btn btn-primary">Add</button>
         </div>
-
           </div>
         </div>
-  </div>
   `
 })
 
