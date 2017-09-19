@@ -1,14 +1,14 @@
 IP2
 
-Meal-Tracker Independent Project
+Meal-Tracker
 
 Description
 
-This is an Angular2 Project that keeps a list of logged meal according to their name, description or review of the meal eaten and also the number of calories each has. IN other words, It's like a food diary.
+This is an Angular2 Project that keeps a list of logged meal according to their name, description or review of the meal eaten and also the number of calories each has.
 
 Installation
 
-Use the following development commands
+Used the following development commands
 
 Npm install
 Bower install
@@ -43,3 +43,4 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+By Granton Mchana.
