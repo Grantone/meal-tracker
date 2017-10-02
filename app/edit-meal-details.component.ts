@@ -1,26 +1,25 @@
-import { Component, EventEmitter } from 'angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Meal } from './meal.model';
 
 @Component({
   selector: 'edit-meal-details',
-  inputs: ['meal'],
-  outputs: ['onUpdateTotalCalories'],
   template: `
-    <div class="edit-form">
+    <div class="edit-form" *ngIf="childSelectedMeal">
       <h3>Edit Description:</h3>
-      <input [(ngModel)]="meal.name"/>
-      <input [(ngModel)]="meal.details"/>
-      <input [(ngModel)]="meal.calories" type="number" #newCalories/>
+      <label>Name</label>
+      <input type="text" [(ngModel)]="childSelectedMeal.name">
+      <label>Name</label>
+      <input type="text" [(ngModel)]="childSelectedMeal.details">
+      <label>Name</label>
+      <input [(ngModel)]="childSelectedMeal.calories" type="number" #newCalories>
       <button (click)="updateTotalCalories(newCalories)">Update</button>
     </div>
   `
 })
 export class EditMealDetailsComponent {
-  public meal: Meal;
-  public onUpdateTotalCalories: EventEmitter<number>;
-  constructor() {
-    this.onUpdateTotalCalories = new EventEmitter();
-  }
+  @Input() childSelectedMeal:Meal;
+  @Output() onUpdateTotalCalories = new EventEmitter();
+
   updateTotalCalories(inputCalories: HTMLInputElement): void {
     var newMealCalories: number = parseInt(inputCalories.value);
     this.onUpdateTotalCalories.emit(newMealCalories);

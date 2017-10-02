@@ -1,15 +1,8 @@
-import { Component } from 'angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Meal } from './meal.model';
-import { MealComponent } from './meal.component';
-import { EditMealDetailsComponent } from './edit-meal-details.component';
-import { NewMealComponent } from './new-meal.component';
-import { CaloriesPipe } from './calories.pipe';
 
 @Component({
   selector: 'meal-list',
-  inputs: ['mealList'],
-  directives: [MealComponent, EditMealDetailsComponent, NewMealComponent],
-  pipes: [CaloriesPipe],
   template: `
     <div class="form">
       <div class="form-fields">
@@ -21,52 +14,39 @@ import { CaloriesPipe } from './calories.pipe';
         </select>
       </div>
     </div>
-    <div *ngFor="#currentMeal of mealList
-      | calories: filterCalories">
+    <div *ngFor="let currentMeal of childMealList | calories:filterCalories">
       <h3 (click)="mealClicked(currentMeal)">
         {{ currentMeal.name }}
       </h3>
-      <div class="meal-item">
+      <p> {{currentMeal.description}}</p>
+      <p> {{currentMeal.calories}}</p>
+      <!-- <div class="meal-item">
         <meal-display
           *ngIf="selectedMeal === currentMeal"
           [meal]="currentMeal">
         </meal-display>
-      </div>
+      </div>  -->
     </div>
-    <edit-meal-details *ngIf="selectedMeal"
-      [meal]="selectedMeal"
-      (onUpdateTotalCalories)="updateCalorieCounter($event)">
+    <edit-meal-details
+      [childSelectedMeal]="selectedMeal" *ngIf="selectedMeal" (onUpdateTotalCalories)="updateCalorieCounter($event)">
     </edit-meal-details>
-    <new-meal
-      (onSubmitNewMeal)="createMeal($event)">
-    </new-meal>
-    <h4>Calorie Count: {{calorieCount}} | Average Calorie Count: {{averageCaloriesString()}}</h4>
+
   `
 })
 export class MealListComponent {
+  @Input() childMealList:Meal;
+
+  @Output()
+
   public mealList: Meal[];
-  public selectedMeal: Meal;
+  public selectedMeal: Meal = null;
   public filterCalories: string = "all";
   public calorieCount: number = 0;
-  public averageCalories: number = 0;
-  public averageCaloriesString: string;
-  constructor() {}
-  mealClicked(clickedMeal: Meal): void {
-    if(this.selectedMeal === clickedMeal) {
-      this.selectedMeal = undefined;
-    } else {
+
+  mealClicked(clickedMeal: Meal) {
     this.selectedMeal = clickedMeal;
-    }
   }
-  createMeal(newMealInfo: Array<any>): void {
-    this.mealList.push(
-      new Meal(newMealInfo[0], newMealInfo[1], newMealInfo[2])
-    );
-    this.calorieCount += newMealInfo[2];
-    this.averageCalories = (this.calorieCount / (this.mealList.length));
-    this.averageCaloriesString =
-    (Math.round((this.averageCalories)*100)/100).toFixed(1);
-  }
+
   onChangeCalories(selectCalories) {
     this.filterCalories = selectCalories;
   }
@@ -76,9 +56,6 @@ export class MealListComponent {
       if(this.mealList[i].name === "selectedMeal") {
         this.mealList[i].calories = newMealCalories;
       }
-      this.calorieCount += (this.mealList[i].calories);
-      this.averageCalories = (this.calorieCount / (this.mealList.length));
-      this.averageCaloriesString = (Math.round((this.averageCalories)*100)/100).toFixed(2);
     }
   }
 }
