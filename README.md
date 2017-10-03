@@ -12,6 +12,7 @@ Npm install
 Bower install
 gulp build
 gulp serve
+
 Setup/Installation Requirements
 
 Install the Node Project Manager (npm) in the Command Line: $ npm install
@@ -22,6 +23,7 @@ Log your food, Edit if need be and also while view, select by number of calories
 Additional pipe
 
 Technologies Used:
+
 HTML
 CSS
 Sass
