@@ -19,8 +19,9 @@ Install the Bower Project Manager in the Command Line: $ bower install
 Run the 'build' gulp.task using: $ gulp build
 Run the 'serve' gulp.task using: $ gulp serve
 Log your food, Edit if need be and also while view, select by number of calories
-Technologies Used
+Additional pipe
 
+Technologies Used:
 HTML
 CSS
 Sass
@@ -28,7 +29,6 @@ JavaScript
 Node
 Angular2
 TypeScript
-Author Granton
 
 License
 
