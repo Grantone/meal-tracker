@@ -8,28 +8,28 @@ Installation
 
 Used the following development commands
 
-Npm install
-Bower install
-gulp build
+Npm install<br>
+Bower install<br>
+gulp build<br>
 gulp serve
 
 Setup/Installation Requirements
 
-Install the Node Project Manager (npm) in the Command Line: $ npm install
-Install the Bower Project Manager in the Command Line: $ bower install
-Run the 'build' gulp.task using: $ gulp build
-Run the 'serve' gulp.task using: $ gulp serve
-Log your food, Edit if need be and also while view, select by number of calories
+Install the Node Project Manager (npm) in the Command Line: $ npm install<br>
+Install the Bower Project Manager in the Command Line: $ bower install<br>
+Run the 'build' gulp.task using: $ gulp build<br>
+Run the 'serve' gulp.task using: $ gulp serve<br>
+Log your food, Edit if need be and also while view, select by number of calories<br>
 Additional pipe
 
 Technologies Used:
 
-HTML
-CSS
-Sass
-JavaScript
-Node
-Angular2
+HTML<br>
+CSS<br>
+Sass<br>
+JavaScript<br>
+Node<br>
+Angular2<br>
 TypeScript
 
 License
