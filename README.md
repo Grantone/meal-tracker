@@ -1,19 +1,19 @@
-Meal-Tracker
+#Meal-Tracker
 
-Description
+##Description
 
-This is an Angular2 Project that keeps a list of logged meal according to their name, description or review of the meal eaten and also the number of calories each has.
+This is an Angular2 Project that keeps track of a list of meals according to their name, description or review of the meal eaten and also the number of calories each has.It lets you know the number of calories you eat in every meal.
 
-Installation
+##Installation
 
-Used the following development commands
+###Used the following development commands
 
 Npm install<br>
 Bower install<br>
 gulp build<br>
 gulp serve
 
-Setup/Installation Requirements
+###Setup/Installation Requirements
 
 Install the Node Project Manager (npm) in the Command Line: $ npm install<br>
 Install the Bower Project Manager in the Command Line: $ bower install<br>
@@ -22,7 +22,7 @@ Run the 'serve' gulp.task using: $ gulp serve<br>
 Log your food, Edit if need be and also while view, select by number of calories<br>
 Additional pipe
 
-Technologies Used:
+###Technologies Used:
 
 HTML<br>
 CSS<br>
@@ -32,11 +32,11 @@ Node<br>
 Angular2<br>
 TypeScript
 
-License
+#License
 
-MIT License
+###MIT License
 
-Copyright (c) 2017 Granton Mchana
+###Copyright (c) 2017 Granton Mchana
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
@@ -44,4 +44,4 @@ The above copyright notice and this permission notice shall be included in all c
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-By Granton Mchana.
+####By Granton Mchana.
