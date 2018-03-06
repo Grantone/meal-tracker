@@ -7,3 +7,7 @@ h1 {
   background-position: center;
   text-indent: bold;
 }
+
+#image {
+  background-image: url(../images/mill.jpg)
+}
