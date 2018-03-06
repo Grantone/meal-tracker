@@ -24,13 +24,13 @@ Additional pipe
 
 ### Technologies Used:
 
-HTML<br>
-CSS<br>
-Sass<br>
-JavaScript<br>
-Node<br>
-Angular2<br>
-TypeScript
+* HTML
+* CSS
+* Sass
+* JavaScript
+* Node
+* Angular2
+* TypeScript
 
 # License
 
