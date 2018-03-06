@@ -8,10 +8,10 @@ This is an Angular2 Project that keeps track of a list of meals according to the
 
 ### Used the following development commands
 
-Npm install<br>
-Bower install<br>
-gulp build<br>
-gulp serve
+* Npm install
+* Bower install
+* Gulp build
+* Gulp serve
 
 ### Setup/Installation Requirements
 
